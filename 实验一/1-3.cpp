@@ -24,8 +24,6 @@ void slove(int l, int r)
 {
     if (r - l < 6)
     {
-        if (r - l < 4)
-            return;
         move(1, 4);
         return;
     }
