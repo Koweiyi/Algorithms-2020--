@@ -1,5 +1,0 @@
-my test of git
-this is foo.txt
-
-
-我又一次改动了foo.txt
