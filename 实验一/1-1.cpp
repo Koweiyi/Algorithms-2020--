@@ -146,5 +146,6 @@ int main(int argc, char const *argv[])
     cin >> tree_cnt;
 
     bineary_search(copy_stu, tree_cnt);
+    system("pause");
     return 0;
 }

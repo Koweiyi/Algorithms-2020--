@@ -40,5 +40,6 @@ int main(int argc, char const *argv[])
         i < x ? box[i] = 2 : box[i] = 1;
     print_step(step);
     slove(0, 2 * x + 1);
+    system("pause");
     return 0;
 }
