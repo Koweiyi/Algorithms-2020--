@@ -28,17 +28,8 @@ int main()
     draw(0, 0, size);
 
     for (int i = 0; i < high; i++)
-    {
-        for (int j = 2 * high; j >= 0; j--)
-        {
-            if (Graps[i][j - 1] == '\\')
-            {
-                Graps[i][j] = '\0';
-                break;
-            }
-        }
-    }
-
+        Graps[i][2*high]='\0';
+    
     for (int i = 0; i < high; i++)
         cout << Graps[i] << endl;
 }

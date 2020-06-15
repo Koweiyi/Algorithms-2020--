@@ -3,10 +3,11 @@ using namespace std;
 
 struct Student
 {
-    int cnt_tree;
-    char name[20];
-    string pro;
-    int id;
+    int cnt_tree;   //植树数目
+    string name;    //姓名
+    string pro;     //专业
+    int id;         //学号
+    //重载运算符 
     bool operator<(const Student s) const
     {
         return cnt_tree < s.cnt_tree;
@@ -73,9 +74,12 @@ void print_Students_afterSort(vector<Student> students)
     cout << "\n-------------------------------------------------------------\n\n";
 }
 
+//排序[l,r]区间内Student元素
 void quickSort(vector<Student> &Vec, int l, int r)
 {
     Student mid = Vec[l + (r - l) / 2];
+    //[0,i)区间内元素小于mid 
+    //(j,r]区间内元素大于mid
     int i = l, j = r;
     do
     {
@@ -128,10 +132,12 @@ void bineary_search(vector<Student> students, int target)
 
 int main(int argc, char const *argv[])
 {
-    vector<Student> students;
-    map<string, int> record_pro;
-    vector<string> pros;
+    vector<Student> students;       //学生数据
+    map<string, int> record_pro;    //专业对应人数记录
+    vector<string> pros;            //专业信息
+
     input_init(students, record_pro, pros);
+
     //保留原始数据
     vector<Student> copy_stu;
     for (Student stu : students)
